@@ -1,0 +1,13 @@
+{
+	"folders": [
+		{
+			"path": "..\\XAMPP\\htdocs\\Ecommerce Site PHP"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "reksa_dana_tokopedia"
+	}
+}
