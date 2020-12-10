@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
     <title>Reksa Dana Tokopedia</title>
 </head>
 <body>
@@ -102,38 +103,40 @@
                         </div>
                         <span>Reksa Dana</span>
                     </div>
-                    <ul>
-                        <li class="flex-li flex-li-2">
-                            <div class="number text-size margin-size text-center">1</div>
-                            <div class="text">
-                                <h2>Daftar Reksa Dana</h2>
-                                <p>
-                                    "Lakukan pengisian formulir Tokopedai Reksa Dana secara online, hanya 5 menit dan tunggu persetujuan selama 1x24 jam"
-                                </p>
-                            </div>
-                        </li>
-                        <li class="flex-li">
-                            <div class="number text-size margin-size text-center">2</div>
-                            <div class="text">
-                                <h2>Beli antara 2 pilihan produk</h2>
-                                <p>
-                                    "Tinggal klik tombol beli dan pilih bergam metode pembayaran yang tersedia, semua bisa dimulai dari Rp10,000"
-                                </p>
-                            </div>
-                        </li>
-                        <li class="flex-li">
-                            <div class="number text-size margin-size text-center">3</div>
-                            <div class="text">
-                                <h2>Cek keuntunagn harianmu</h2>
-                                <p>
-                                    Pantau pergerakan dana investasimu setiap harinya!
-                                </p>
-                            </div>
-                        </li>
-                    </ul>
-                    <img src="img/hp1.png" alt="" class="gambar-hp aktif kanan" width="380">
-                    <!-- <img src="img/hp2.png" alt="" class="gambar-hp" width="380">
-                    <img src="img/hp3.png" alt="" class="gambar-hp" width="380"> -->
+                    <div x-data="{ tab: 'sli-1' }">
+                        <ul>
+                            <li class="flex-li flex-li-2">
+                                <div class="number text-size margin-size text-center">1</div>
+                                <div class="text">
+                                    <h2  @click="tab = 'sli-1'">Daftar Reksa Dana</h2>
+                                    <p x-show="tab === 'sli-1'">
+                                        "Lakukan pengisian formulir Tokopedai Reksa Dana secara online, hanya 5 menit dan tunggu persetujuan selama 1x24 jam"
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="flex-li">
+                                <div class="number text-size margin-size text-center">2</div>
+                                <div class="text">
+                                    <h2  @click="tab = 'sli-2'">Beli antara 2 pilihan produk</h2>
+                                    <p x-show="tab === 'sli-2'">
+                                        "Tinggal klik tombol beli dan pilih bergam metode pembayaran yang tersedia, semua bisa dimulai dari Rp10,000"
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="flex-li">
+                                <div class="number text-size margin-size text-center">3</div>
+                                <div class="text">
+                                    <h2  @click="tab = 'sli-3'">Cek keuntunagn harianmu</h2>
+                                    <p x-show="tab === 'sli-3'">
+                                        Pantau pergerakan dana investasimu setiap harinya!
+                                    </p>
+                                </div>
+                            </li>
+                        </ul>
+                        <img x-show="tab === 'sli-1'" src="img/hp1.png" alt="" class="gambar-hp aktif kanan" width="380">
+                        <img x-show="tab === 'sli-2'" src="img/hp2.png" alt="" class="gambar-hp" width="380">
+                        <img x-show="tab === 'sli-3'" src="img/hp3.png" alt="" class="gambar-hp" width="380">
+                    </div>
                 </section>
             </section>   
              
